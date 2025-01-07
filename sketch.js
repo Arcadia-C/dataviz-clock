@@ -1,3 +1,5 @@
+let prevMin = 0;
+
 // setup() is called once at page-load
 function setup() {
     createCanvas(800,800); // make an HTML canvas element width x height pixels
@@ -10,6 +12,11 @@ function draw() {
     let sec = second();
     const d = new Date();
     let milis = d.getMilliseconds();
+
+    if (prevMin != min){
+        prevMin = min;
+        console.log(prevMin)
+    }
 
     background(255, 236, 209);
     // alt color: background(241, 250, 238);
